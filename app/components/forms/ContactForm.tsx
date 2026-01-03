@@ -43,7 +43,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto">
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <div>
-          <label htmlFor="fullName" className="block text-sm font-medium text-[#f5f5f1] mb-2">
+          <label htmlFor="fullName" className="block text-sm font-medium text-off-white mb-2">
             Full Name *
           </label>
           <input
@@ -53,12 +53,12 @@ export default function ContactForm() {
             required
             value={formData.fullName}
             onChange={handleChange}
-            className="w-full px-4 py-2 bg-[#2a2a2a] border border-[#3a3a3a] rounded-md text-[#f5f5f1] focus:outline-none focus:ring-2 focus:ring-[#5fa86a] focus:border-transparent"
+            className="w-full px-4 py-2 bg-card-bg border border-border rounded-md text-off-white focus:outline-none focus:ring-2 focus:ring-cta-green focus:border-transparent"
           />
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-[#f5f5f1] mb-2">
+          <label htmlFor="email" className="block text-sm font-medium text-off-white mb-2">
             Email Address *
           </label>
           <input
@@ -68,13 +68,13 @@ export default function ContactForm() {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-2 bg-[#2a2a2a] border border-[#3a3a3a] rounded-md text-[#f5f5f1] focus:outline-none focus:ring-2 focus:ring-[#5fa86a] focus:border-transparent"
+            className="w-full px-4 py-2 bg-card-bg border border-border rounded-md text-off-white focus:outline-none focus:ring-2 focus:ring-cta-green focus:border-transparent"
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="subject" className="block text-sm font-medium text-[#f5f5f1] mb-2">
+        <label htmlFor="subject" className="block text-sm font-medium text-off-white mb-2">
           Subject *
         </label>
         <input
@@ -84,12 +84,12 @@ export default function ContactForm() {
           required
           value={formData.subject}
           onChange={handleChange}
-          className="w-full px-4 py-2 bg-[#2a2a2a] border border-[#3a3a3a] rounded-md text-[#f5f5f1] focus:outline-none focus:ring-2 focus:ring-[#5fa86a] focus:border-transparent"
+          className="w-full px-4 py-2 bg-card-bg border border-border rounded-md text-off-white focus:outline-none focus:ring-2 focus:ring-cta-green focus:border-transparent"
         />
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-[#f5f5f1] mb-2">
+        <label htmlFor="message" className="block text-sm font-medium text-off-white mb-2">
           Message *
         </label>
         <textarea
@@ -99,7 +99,7 @@ export default function ContactForm() {
           required
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-2 bg-[#2a2a2a] border border-[#3a3a3a] rounded-md text-[#f5f5f1] focus:outline-none focus:ring-2 focus:ring-[#5fa86a] focus:border-transparent"
+          className="w-full px-4 py-2 bg-card-bg border border-border rounded-md text-off-white focus:outline-none focus:ring-2 focus:ring-cta-green focus:border-transparent"
           placeholder="How can we help you?"
         />
       </div>
@@ -108,18 +108,18 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={formState === "submitting"}
-          className="w-full px-6 py-3 bg-[#5fa86a] text-[#1a1a1a] font-medium rounded-md hover:bg-[#4d9558] focus:outline-none focus:ring-2 focus:ring-[#5fa86a] focus:ring-offset-2 focus:ring-offset-[#1a1a1a] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="w-full px-6 py-3 bg-cta-green text-background font-medium rounded-md hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-cta-green focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           {formState === "submitting" ? "Sending..." : "Send Message"}
         </button>
       </div>
 
       {formState === "success" && (
-        <div className="p-4 bg-[#1a4d2e] border border-[#5fa86a] rounded-md">
-          <p className="text-[#f5f5f1] text-center">
+        <div className="p-4 bg-forest-green border border-cta-green rounded-md">
+          <p className="text-off-white text-center">
             Thank you for reaching out! We&rsquo;ll get back to you soon.
           </p>
-          <p className="text-[#f5f5f1]/60 text-xs text-center mt-2">
+          <p className="text-soft-grey/60 text-xs text-center mt-2">
             (Demo form - data logged to console)
           </p>
         </div>
@@ -127,7 +127,7 @@ export default function ContactForm() {
 
       {formState === "error" && (
         <div className="p-4 bg-red-900/30 border border-red-600 rounded-md">
-          <p className="text-[#f5f5f1] text-center">
+          <p className="text-off-white text-center">
             Something went wrong. Please try again.
           </p>
         </div>

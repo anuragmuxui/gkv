@@ -14,14 +14,14 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1a1a1a]/95 backdrop-blur-sm border-b border-[#3a3a3a]">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Global navigation">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex lg:flex-1">
             <Link href="/" className="flex items-center space-x-2 -m-1.5 p-1.5">
-              <span className="text-[#5fa86a] font-bold text-xl">GKV</span>
-              <span className="hidden sm:inline text-[#f5f5f1] font-medium">Green Kerala Volunteers</span>
+              <span className="text-cta-green font-bold text-xl">GKV</span>
+              <span className="hidden sm:inline text-off-white font-medium">Green Kerala Volunteers</span>
             </Link>
           </div>
 
@@ -31,7 +31,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-[#f5f5f1] hover:text-[#5fa86a] transition-colors"
+                className="text-sm font-medium text-off-white hover:text-cta-green transition-colors"
               >
                 {item.name}
               </Link>
@@ -42,7 +42,7 @@ export default function Header() {
           <div className="flex md:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-[#f5f5f1]"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-off-white"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-expanded={mobileMenuOpen}
               aria-label="Toggle navigation menu"
@@ -63,13 +63,13 @@ export default function Header() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-[#3a3a3a] mt-2 pb-3">
+          <div className="md:hidden border-t border-border mt-2 pb-3">
             <div className="space-y-1 pt-2">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-[#f5f5f1] hover:text-[#5fa86a] hover:bg-[#2a2a2a] rounded-md transition-colors"
+                  className="block px-3 py-2 text-base font-medium text-off-white hover:text-cta-green hover:bg-card-bg rounded-md transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}

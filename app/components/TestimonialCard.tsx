@@ -7,16 +7,16 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard({ quote, name, city, role }: TestimonialCardProps) {
   return (
-    <div className="bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg p-6">
+    <div className="bg-card-bg border border-border rounded-lg p-6">
       <blockquote>
-        <p className="text-[#f5f5f1] italic mb-4">
+        <p className="text-off-white italic mb-4">
           &ldquo;{quote}&rdquo;
         </p>
         <footer className="text-sm">
           <cite className="not-italic">
-            <span className="font-semibold text-[#5fa86a]">{name}</span>
-            <span className="text-[#f5f5f1]/70"> &mdash; {city}</span>
-            {role && <span className="text-[#f5f5f1]/60 block mt-1">{role}</span>}
+            <span className="font-semibold text-cta-green">{name}</span>
+            <span className="text-soft-grey"> &mdash; {city}</span>
+            {role && <span className="text-soft-grey/80 block mt-1">{role}</span>}
           </cite>
         </footer>
       </blockquote>

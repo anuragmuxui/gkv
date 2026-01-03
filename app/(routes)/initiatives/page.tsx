@@ -204,35 +204,35 @@ export default function InitiativesPage() {
     <>
       <Header />
       
-      <main className="pt-16 min-h-screen">
+      <main className="pt-16 min-h-screen bg-background">
         {/* Hero Section */}
-        <SectionContainer className="bg-gradient-to-br from-[#1a4d2e] to-[#0d2617]">
+        <SectionContainer className="bg-gradient-to-br from-forest-green to-background">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-[#f5f5f1] mb-6">
+            <h1 className="text-4xl sm:text-5xl font-bold text-off-white mb-6">
               Our Initiatives
             </h1>
-            <p className="text-xl text-[#f5f5f1]/90 leading-relaxed">
+            <p className="text-xl text-off-white/90 leading-relaxed">
               From beach cleanups to forest restoration, explore our environmental work across Kerala.
             </p>
           </div>
         </SectionContainer>
 
         {/* Filters */}
-        <SectionContainer className="bg-[#1a1a1a]">
+        <SectionContainer className="bg-background">
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-[#f5f5f1] mb-6 text-center">
+            <h2 className="text-2xl font-bold text-off-white mb-6 text-center">
               Filter Initiatives
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
               <div>
-                <label htmlFor="type-filter" className="block text-sm font-medium text-[#f5f5f1] mb-2">
+                <label htmlFor="type-filter" className="block text-sm font-medium text-off-white mb-2">
                   By Type
                 </label>
                 <select
                   id="type-filter"
                   value={typeFilter}
                   onChange={(e) => setTypeFilter(e.target.value)}
-                  className="w-full px-4 py-2 bg-[#2a2a2a] border border-[#3a3a3a] rounded-md text-[#f5f5f1] focus:outline-none focus:ring-2 focus:ring-[#5fa86a]"
+                  className="w-full px-4 py-2 bg-card-bg border border-border rounded-md text-off-white focus:outline-none focus:ring-2 focus:ring-cta-green"
                 >
                   <option value="All">All Types</option>
                   <option value="Cleanup">Cleanup</option>
@@ -242,14 +242,14 @@ export default function InitiativesPage() {
               </div>
 
               <div>
-                <label htmlFor="district-filter" className="block text-sm font-medium text-[#f5f5f1] mb-2">
+                <label htmlFor="district-filter" className="block text-sm font-medium text-off-white mb-2">
                   By District
                 </label>
                 <select
                   id="district-filter"
                   value={districtFilter}
                   onChange={(e) => setDistrictFilter(e.target.value)}
-                  className="w-full px-4 py-2 bg-[#2a2a2a] border border-[#3a3a3a] rounded-md text-[#f5f5f1] focus:outline-none focus:ring-2 focus:ring-[#5fa86a]"
+                  className="w-full px-4 py-2 bg-card-bg border border-border rounded-md text-off-white focus:outline-none focus:ring-2 focus:ring-cta-green"
                 >
                   <option value="All">All Districts</option>
                   {districts.map((district) => (
@@ -261,14 +261,14 @@ export default function InitiativesPage() {
               </div>
 
               <div>
-                <label htmlFor="status-filter" className="block text-sm font-medium text-[#f5f5f1] mb-2">
+                <label htmlFor="status-filter" className="block text-sm font-medium text-off-white mb-2">
                   By Status
                 </label>
                 <select
                   id="status-filter"
                   value={statusFilter}
                   onChange={(e) => setStatusFilter(e.target.value)}
-                  className="w-full px-4 py-2 bg-[#2a2a2a] border border-[#3a3a3a] rounded-md text-[#f5f5f1] focus:outline-none focus:ring-2 focus:ring-[#5fa86a]"
+                  className="w-full px-4 py-2 bg-card-bg border border-border rounded-md text-off-white focus:outline-none focus:ring-2 focus:ring-cta-green"
                 >
                   <option value="All">All Status</option>
                   <option value="Ongoing">Ongoing</option>
@@ -280,7 +280,7 @@ export default function InitiativesPage() {
 
           {/* Results Count */}
           <div className="text-center mb-8">
-            <p className="text-[#f5f5f1]/70">
+            <p className="text-soft-grey">
               Showing {filteredInitiatives.length} of {allInitiatives.length} initiatives
             </p>
           </div>
@@ -290,16 +290,16 @@ export default function InitiativesPage() {
             {filteredInitiatives.map((initiative) => (
               <div
                 key={initiative.id}
-                className="bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg p-6 hover:border-[#5fa86a] transition-colors"
+                className="bg-card-bg border border-border rounded-lg p-6 hover:border-cta-green transition-colors"
               >
                 <div className="flex items-start justify-between mb-3">
                   <span
                     className={`px-3 py-1 rounded-full text-xs font-medium ${
                       initiative.type === "Cleanup"
-                        ? "bg-[#4a7c7e]/20 text-[#4a7c7e]"
+                        ? "bg-cta-green/20 text-cta-green"
                         : initiative.type === "Plantation"
-                        ? "bg-[#5fa86a]/20 text-[#5fa86a]"
-                        : "bg-[#8b6f47]/20 text-[#8b6f47]"
+                        ? "bg-cta-green/20 text-cta-green"
+                        : "bg-cta-green/20 text-cta-green"
                     }`}
                   >
                     {initiative.type}
@@ -307,38 +307,38 @@ export default function InitiativesPage() {
                   <span
                     className={`px-3 py-1 rounded-full text-xs font-medium ${
                       initiative.status === "Ongoing"
-                        ? "bg-[#5fa86a]/20 text-[#5fa86a]"
-                        : "bg-[#f5f5f1]/20 text-[#f5f5f1]/70"
+                        ? "bg-cta-green/20 text-cta-green"
+                        : "bg-off-white/20 text-soft-grey"
                     }`}
                   >
                     {initiative.status}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-semibold text-[#f5f5f1] mb-2">
+                <h3 className="text-xl font-semibold text-off-white mb-2">
                   {initiative.name}
                 </h3>
 
-                <p className="text-[#f5f5f1]/70 text-sm mb-4">
+                <p className="text-soft-grey text-sm mb-4">
                   {initiative.description}
                 </p>
 
                 <div className="space-y-2 mb-4 text-sm">
-                  <p className="flex items-center text-[#f5f5f1]/70">
-                    <svg className="w-4 h-4 mr-2 text-[#5fa86a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <p className="flex items-center text-soft-grey">
+                    <svg className="w-4 h-4 mr-2 text-cta-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                     {initiative.location}
                   </p>
-                  <p className="flex items-center text-[#f5f5f1]/70">
-                    <svg className="w-4 h-4 mr-2 text-[#5fa86a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <p className="flex items-center text-soft-grey">
+                    <svg className="w-4 h-4 mr-2 text-cta-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                     {initiative.date}
                   </p>
-                  <p className="flex items-center text-[#f5f5f1]/70">
-                    <svg className="w-4 h-4 mr-2 text-[#5fa86a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <p className="flex items-center text-soft-grey">
+                    <svg className="w-4 h-4 mr-2 text-cta-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                     {initiative.participants} participants
@@ -356,7 +356,7 @@ export default function InitiativesPage() {
 
           {filteredInitiatives.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-[#f5f5f1]/70 text-lg">
+              <p className="text-soft-grey text-lg">
                 No initiatives match your filters. Try adjusting your selection.
               </p>
             </div>
@@ -364,12 +364,12 @@ export default function InitiativesPage() {
         </SectionContainer>
 
         {/* CTA Section */}
-        <SectionContainer className="bg-gradient-to-br from-[#1a4d2e] to-[#0d2617]">
+        <SectionContainer className="bg-gradient-to-br from-forest-green to-background">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-[#f5f5f1] mb-6">
+            <h2 className="text-3xl font-bold text-off-white mb-6">
               Ready to Make an Impact?
             </h2>
-            <p className="text-lg text-[#f5f5f1]/90 mb-8">
+            <p className="text-lg text-off-white/90 mb-8">
               Join our upcoming drives and be part of Kerala&rsquo;s environmental movement.
             </p>
             <CtaButton href="/volunteer" variant="primary" className="text-lg">

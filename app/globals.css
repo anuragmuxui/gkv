@@ -1,32 +1,31 @@
 @import "tailwindcss";
 
-/* Dark-Earthy Color Palette for Green Kerala Volunteers */
+/* Dark Forest Green Theme */
 :root {
   /* Primary Colors */
-  --forest-green: #1a4d2e;
-  --muted-teal: #4a7c7e;
-  --off-white: #f5f5f1;
-  --charcoal: #2a2a2a;
+  --forest-green: #052c16;
+  --off-white: #f9fafb;
+  --soft-grey: #9ca3af;
   
   /* Accent Colors */
-  --leaf-green: #5fa86a;
-  --clay-brown: #8b6f47;
+  --cta-green: #22c55e;
   
   /* Semantic Colors */
-  --background: #1a1a1a;
-  --foreground: #f5f5f1;
-  --card-bg: #2a2a2a;
-  --border: #3a3a3a;
+  --background: #0B0F0E;
+  --foreground: #f9fafb;
+  --card-bg: #0f1413;
+  --border: #141d1b;
 }
 
 @theme inline {
   /* Custom Color Tokens */
-  --color-forest-green: #1a4d2e;
-  --color-muted-teal: #4a7c7e;
-  --color-off-white: #f5f5f1;
-  --color-charcoal: #2a2a2a;
-  --color-leaf-green: #5fa86a;
-  --color-clay-brown: #8b6f47;
+  --color-forest-green: #052c16;
+  --color-off-white: #f9fafb;
+  --color-soft-grey: #9ca3af;
+  --color-cta-green: #22c55e;
+  --color-background: #0B0F0E;
+  --color-card-bg: #0f1413;
+  --color-border: #141d1b;
   
   /* Typography */
   --font-sans: var(--font-inter);
@@ -36,6 +35,14 @@
   /* Spacing for consistent sections */
   --section-padding-mobile: 3rem 1.5rem;
   --section-padding-desktop: 5rem 2rem;
+
+  /* Animations */
+  --animate-fade-in: fade-in 0.6s ease-out forwards;
+  
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 }
 
 body {
@@ -44,6 +51,7 @@ body {
   font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 16px;
   line-height: 1.6;
+  animation: var(--animate-fade-in);
 }
 
 @media (min-width: 1024px) {
@@ -59,12 +67,12 @@ html {
 
 /* Focus styles for accessibility */
 *:focus-visible {
-  outline: 2px solid var(--leaf-green);
+  outline: 2px solid var(--cta-green);
   outline-offset: 2px;
 }
 
 /* Selection colors */
 ::selection {
-  background: var(--leaf-green);
-  color: var(--charcoal);
+  background: var(--cta-green);
+  color: var(--background);
 }
