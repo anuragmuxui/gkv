@@ -16,7 +16,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#1a1a1a] border-t border-[#3a3a3a]" aria-labelledby="footer-heading">
+    <footer className="bg-background border-t border-border" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">Footer</h2>
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         {/* Main Navigation */}
@@ -25,7 +25,7 @@ export default function Footer() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm text-[#f5f5f1] hover:text-[#5fa86a] transition-colors"
+              className="text-sm text-off-white hover:text-cta-green transition-colors"
             >
               {item.name}
             </Link>
@@ -38,7 +38,7 @@ export default function Footer() {
             <a
               key={item.name}
               href={item.href}
-              className="text-[#f5f5f1] hover:text-[#5fa86a] transition-colors"
+              className="text-off-white hover:text-cta-green transition-colors"
               aria-label={item.name}
             >
               <span className="sr-only">{item.name}</span>
@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <p className="text-center text-sm text-[#f5f5f1]/70">
+        <p className="text-center text-sm text-soft-grey">
           &copy; {new Date().getFullYear()} Green Kerala Volunteers. A grassroots environmental movement.
         </p>
       </div>

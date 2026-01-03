@@ -63,26 +63,26 @@ export default function ContactPage() {
     <>
       <Header />
       
-      <main className="pt-16 min-h-screen">
+      <main className="pt-16 min-h-screen bg-background">
         {/* Hero Section */}
-        <SectionContainer className="bg-gradient-to-br from-[#1a4d2e] to-[#0d2617]">
+        <SectionContainer className="bg-gradient-to-br from-forest-green to-background">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-[#f5f5f1] mb-6">
+            <h1 className="text-4xl sm:text-5xl font-bold text-off-white mb-6">
               Contact Us
             </h1>
-            <p className="text-xl text-[#f5f5f1]/90 leading-relaxed">
+            <p className="text-xl text-off-white/90 leading-relaxed">
               Have questions? Want to partner with us? We&rsquo;d love to hear from you.
             </p>
           </div>
         </SectionContainer>
 
         {/* Contact Methods */}
-        <SectionContainer className="bg-[#1a1a1a]">
+        <SectionContainer className="bg-background">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#f5f5f1] mb-4">
+            <h2 className="text-3xl font-bold text-off-white mb-4">
               Get in Touch
             </h2>
-            <p className="text-lg text-[#f5f5f1]/70 max-w-2xl mx-auto">
+            <p className="text-lg text-soft-grey max-w-2xl mx-auto">
               Reach out through any of these channels.
             </p>
           </div>
@@ -91,15 +91,15 @@ export default function ContactPage() {
               <a
                 key={index}
                 href={method.link}
-                className="bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg p-6 hover:border-[#5fa86a] transition-colors text-center group"
+                className="bg-card-bg border border-border rounded-lg p-6 hover:border-cta-green transition-colors text-center group"
               >
-                <div className="w-12 h-12 bg-[#1a4d2e] rounded-full flex items-center justify-center text-[#5fa86a] mx-auto mb-4 group-hover:bg-[#5fa86a] group-hover:text-[#1a1a1a] transition-colors">
+                <div className="w-12 h-12 bg-forest-green rounded-full flex items-center justify-center text-cta-green mx-auto mb-4 group-hover:bg-cta-green group-hover:text-background transition-colors">
                   {method.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-[#f5f5f1] mb-2">
+                <h3 className="text-lg font-semibold text-off-white mb-2">
                   {method.title}
                 </h3>
-                <p className="text-[#f5f5f1]/70 text-sm break-words">
+                <p className="text-soft-grey text-sm break-words">
                   {method.value}
                 </p>
               </a>
@@ -108,12 +108,12 @@ export default function ContactPage() {
         </SectionContainer>
 
         {/* Contact Form */}
-        <SectionContainer className="bg-[#2a2a2a]">
+        <SectionContainer className="bg-card-bg">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#f5f5f1] mb-4">
+            <h2 className="text-3xl font-bold text-off-white mb-4">
               Send Us a Message
             </h2>
-            <p className="text-lg text-[#f5f5f1]/70 max-w-2xl mx-auto">
+            <p className="text-lg text-soft-grey max-w-2xl mx-auto">
               Fill out the form and we&rsquo;ll get back to you within 48 hours.
             </p>
           </div>
@@ -121,42 +121,42 @@ export default function ContactPage() {
         </SectionContainer>
 
         {/* District Coordinators */}
-        <SectionContainer className="bg-[#1a1a1a]">
+        <SectionContainer className="bg-background">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#f5f5f1] mb-4">
+            <h2 className="text-3xl font-bold text-off-white mb-4">
               District Coordinators
             </h2>
-            <p className="text-lg text-[#f5f5f1]/70 max-w-2xl mx-auto">
+            <p className="text-lg text-soft-grey max-w-2xl mx-auto">
               Reach out to your local coordinator for district-specific initiatives.
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg overflow-hidden">
+            <div className="bg-card-bg border border-border rounded-lg overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full">
-                  <thead className="bg-[#1a4d2e]">
+                  <thead className="bg-forest-green">
                     <tr>
-                      <th className="px-6 py-3 text-left text-sm font-semibold text-[#f5f5f1]">
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-off-white">
                         District
                       </th>
-                      <th className="px-6 py-3 text-left text-sm font-semibold text-[#f5f5f1]">
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-off-white">
                         Coordinator
                       </th>
-                      <th className="px-6 py-3 text-left text-sm font-semibold text-[#f5f5f1]">
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-off-white">
                         Contact
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#3a3a3a]">
+                  <tbody className="divide-y divide-border">
                     {districtCoordinators.map((item, index) => (
-                      <tr key={index} className="hover:bg-[#1a1a1a] transition-colors">
-                        <td className="px-6 py-4 text-sm text-[#f5f5f1]">
+                      <tr key={index} className="hover:bg-background transition-colors">
+                        <td className="px-6 py-4 text-sm text-off-white">
                           {item.district}
                         </td>
-                        <td className="px-6 py-4 text-sm text-[#f5f5f1]/80">
+                        <td className="px-6 py-4 text-sm text-soft-grey">
                           {item.coordinator}
                         </td>
-                        <td className="px-6 py-4 text-sm text-[#f5f5f1]/70">
+                        <td className="px-6 py-4 text-sm text-soft-grey/70">
                           {item.contact}
                         </td>
                       </tr>
@@ -165,42 +165,42 @@ export default function ContactPage() {
                 </table>
               </div>
             </div>
-            <p className="text-center text-sm text-[#f5f5f1]/60 mt-4">
+            <p className="text-center text-sm text-soft-grey/60 mt-4">
               Coordinator information is updated regularly. Some positions may be vacant.
             </p>
           </div>
         </SectionContainer>
 
         {/* Office Location */}
-        <SectionContainer className="bg-[#2a2a2a]">
+        <SectionContainer className="bg-card-bg">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#f5f5f1] mb-4">
+            <h2 className="text-3xl font-bold text-off-white mb-4">
               Office Location
             </h2>
-            <p className="text-lg text-[#f5f5f1]/70 max-w-2xl mx-auto">
+            <p className="text-lg text-soft-grey max-w-2xl mx-auto">
               Visit our coordination office in Kochi.
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-[#1a1a1a] border border-[#3a3a3a] rounded-lg p-8">
+            <div className="bg-background border border-border rounded-lg p-8">
               <div className="flex items-start space-x-4 mb-6">
-                <svg className="w-6 h-6 text-[#5fa86a] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-cta-green flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <div>
-                  <h3 className="text-lg font-semibold text-[#f5f5f1] mb-2">
+                  <h3 className="text-lg font-semibold text-off-white mb-2">
                     Green Kerala Volunteers HQ
                   </h3>
-                  <p className="text-[#f5f5f1]/70">
+                  <p className="text-soft-grey">
                     [Placeholder Address]<br />
                     MG Road, Ernakulam<br />
                     Kochi, Kerala 682035
                   </p>
                 </div>
               </div>
-              <div className="aspect-video bg-[#2a2a2a] rounded-lg flex items-center justify-center border border-[#3a3a3a]">
-                <p className="text-[#f5f5f1]/50 text-sm">
+              <div className="aspect-video bg-card-bg rounded-lg flex items-center justify-center border border-border">
+                <p className="text-soft-grey/50 text-sm">
                   [PLACEHOLDER: Google Maps Embed]
                 </p>
               </div>

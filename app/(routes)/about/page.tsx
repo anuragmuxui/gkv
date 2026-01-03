@@ -41,26 +41,26 @@ export default function AboutPage() {
     <>
       <Header />
       
-      <main className="pt-16 min-h-screen">
+      <main className="pt-16 min-h-screen bg-background">
         {/* Hero Section */}
-        <SectionContainer className="bg-gradient-to-br from-[#1a4d2e] to-[#0d2617]">
+        <SectionContainer className="bg-gradient-to-br from-forest-green to-background">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-[#f5f5f1] mb-6">
+            <h1 className="text-4xl sm:text-5xl font-bold text-off-white mb-6">
               About Green Kerala Volunteers
             </h1>
-            <p className="text-xl text-[#f5f5f1]/90 leading-relaxed">
+            <p className="text-xl text-off-white/90 leading-relaxed">
               A grassroots environmental movement protecting Kerala&rsquo;s natural heritage through volunteer-driven action.
             </p>
           </div>
         </SectionContainer>
 
         {/* Origin Story */}
-        <SectionContainer className="bg-[#1a1a1a]">
+        <SectionContainer className="bg-background">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-[#f5f5f1] mb-6 text-center">
+            <h2 className="text-3xl font-bold text-off-white mb-6 text-center">
               Our Story
             </h2>
-            <div className="space-y-4 text-[#f5f5f1]/80 text-lg leading-relaxed">
+            <div className="space-y-4 text-soft-grey text-lg leading-relaxed">
               <p>
                 Green Kerala Volunteers began in 2020 when a small group of environmental enthusiasts in Kochi organized a beach cleanup that drew unexpected crowds. What started as a one-day event grew into a statewide movement.
               </p>
@@ -75,12 +75,12 @@ export default function AboutPage() {
         </SectionContainer>
 
         {/* Core Values */}
-        <SectionContainer className="bg-[#2a2a2a]">
+        <SectionContainer className="bg-card-bg">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#f5f5f1] mb-4">
+            <h2 className="text-3xl font-bold text-off-white mb-4">
               Our Core Values
             </h2>
-            <p className="text-lg text-[#f5f5f1]/70 max-w-2xl mx-auto">
+            <p className="text-lg text-soft-grey max-w-2xl mx-auto">
               The principles that guide every initiative and decision we make.
             </p>
           </div>
@@ -88,13 +88,13 @@ export default function AboutPage() {
             {coreValues.map((value, index) => (
               <div
                 key={index}
-                className="bg-[#1a1a1a] border border-[#3a3a3a] rounded-lg p-6 hover:border-[#5fa86a] transition-colors"
+                className="bg-background border border-border rounded-lg p-6 hover:border-cta-green transition-colors"
               >
                 <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-semibold text-[#f5f5f1] mb-3">
+                <h3 className="text-xl font-semibold text-off-white mb-3">
                   {value.title}
                 </h3>
-                <p className="text-[#f5f5f1]/70">
+                <p className="text-soft-grey">
                   {value.description}
                 </p>
               </div>
@@ -103,12 +103,12 @@ export default function AboutPage() {
         </SectionContainer>
 
         {/* Transparency Note */}
-        <SectionContainer className="bg-[#1a1a1a]">
-          <div className="max-w-4xl mx-auto bg-[#2a2a2a] border border-[#3a3a3a] rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-[#f5f5f1] mb-4">
+        <SectionContainer className="bg-background">
+          <div className="max-w-4xl mx-auto bg-card-bg border border-border rounded-lg p-8">
+            <h2 className="text-2xl font-bold text-off-white mb-4">
               Transparency & Accountability
             </h2>
-            <div className="space-y-3 text-[#f5f5f1]/80">
+            <div className="space-y-3 text-off-white/80">
               <p>
                 We operate with full transparency. All our impact data—cleanup metrics, plantation numbers, volunteer counts—is tracked and shared publicly.
               </p>
@@ -123,21 +123,21 @@ export default function AboutPage() {
         </SectionContainer>
 
         {/* Team Section */}
-        <SectionContainer className="bg-[#2a2a2a]">
+        <SectionContainer className="bg-card-bg">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#f5f5f1] mb-4">
+            <h2 className="text-3xl font-bold text-off-white mb-4">
               Our Team
             </h2>
-            <p className="text-lg text-[#f5f5f1]/70 max-w-2xl mx-auto">
+            <p className="text-lg text-soft-grey max-w-2xl mx-auto">
               Green Kerala Volunteers is coordinated by dedicated volunteers across all 14 districts.
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-[#1a1a1a] border border-[#3a3a3a] rounded-lg p-8 text-center">
-              <p className="text-[#f5f5f1]/70 mb-4">
+            <div className="bg-background border border-border rounded-lg p-8 text-center">
+              <p className="text-soft-grey mb-4">
                 [PLACEHOLDER: District Coordinators Grid]
               </p>
-              <p className="text-sm text-[#f5f5f1]/60">
+              <p className="text-sm text-soft-grey/60">
                 District-wise coordinator information with names, roles, and contact details will be displayed here.
               </p>
             </div>
@@ -145,12 +145,12 @@ export default function AboutPage() {
         </SectionContainer>
 
         {/* CTA Section */}
-        <SectionContainer className="bg-gradient-to-br from-[#1a4d2e] to-[#0d2617]">
+        <SectionContainer className="bg-gradient-to-br from-forest-green to-background">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-[#f5f5f1] mb-6">
+            <h2 className="text-3xl font-bold text-off-white mb-6">
               Join Our Movement
             </h2>
-            <p className="text-lg text-[#f5f5f1]/90 mb-8">
+            <p className="text-lg text-off-white/90 mb-8">
               Whether you can commit 2 hours a month or want to become a district lead, there&rsquo;s a place for you in our volunteer network.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
